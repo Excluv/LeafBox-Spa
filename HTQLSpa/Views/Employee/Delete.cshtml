@@ -1,0 +1,72 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post" asp-action="Delete">
+    <input asp-for="EmployeeID" hidden  />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h4 class="text-primary-basket" style="padding: 10px">Sửa Thông tin Sản phẩm</h4>
+        </div>
+        <div class="mb-3">
+            <label asp-for="EmployeeName"></label>
+            <input asp-for="EmployeeName" class="form-control"   />
+            <span asp-validation-for="EmployeeName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DoB"></label>
+            <input asp-for="DoB" />
+            <span asp-validation-for="DoB" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="EmployeeAddress"></label>
+            <input asp-for="EmployeeAddress" class="form-control"   />
+            <span asp-validation-for="EmployeeAddress" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="PhoneNumber"></label>
+            <input asp-for="PhoneNumber" class="form-control"   />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Position"></label>
+            <input asp-for="Position" class="form-control"   />
+            <span asp-validation-for="Position" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="PhoneNumber"></label>
+            <input asp-for="PhoneNumber" class="form-control"   />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="AccountID"></label>
+            <input asp-for="AccountID" class="form-control"   />
+            <span asp-validation-for="AccountID" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" class="form-control"   />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Role"></label>
+            <input asp-for="Role" class="form-control"   />
+            <span asp-validation-for="Role" class="text-danger"></span>
+        </div>
+        <a asp-controller="" asp-action="">
+            <input type="submit" name="Submit" style="width:150px; padding:10px;" value="Xoá">
+        </a>
+        <button asp-controller="Employee" asp-action="Index" style="width:150px; padding:10px;">
+            Quay lại
+        </button>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+    <partial name="_ValidationScriptsPartial"   />
+    }
+}
+

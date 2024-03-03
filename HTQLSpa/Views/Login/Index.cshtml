@@ -1,0 +1,49 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "Login or Register";
+}
+
+<div class="shop_top">
+    <div class="container">
+        <div class="col-md-6">
+            <div class="login-page">
+                <h4 class="title">Dành cho Khách hàng mới</h4>
+                <p>Xin vui lòng đăng ký Tài khoản để có thể thanh toán & đặt hàng.</p>
+                <div class="button1">
+                    <a asp-controller="Login" asp-action="UserRegister"><input type="submit" name="Submit" value="Tạo Tài khoản"></a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="login-title">
+                <h4 class="title">Đăng nhập Tài khoản</h4>
+                <div id="loginbox" class="loginbox">
+                <form asp-action="UserVerification" method="post" name="login" id="login-form">
+                    <fieldset class="input">
+                    <p id="login-form-username">
+                        <label asp-for="AccountID"></label>
+                        <input asp-for="AccountID" type="text" class="inputbox" size="18" autocomplete="off">
+                    </p>
+                    <p id="login-form-password">
+                        <label asp-for="Password"></label>
+                        <input asp-for="Password" type="text" class="inputbox" size="18" autocomplete="off">
+                    </p>
+                    <div class="remember">
+                        <p id="login-form-remember">
+	                        <label for="modlgn_remember"><a asp-controller="Login" asp-action="EmployeeLogin">Đăng nhập tài khoản nhân viên</a></label>
+                        </p>
+                        <input type="submit" name="Submit" class="button" value="Đăng nhập"><div class="clear"></div>
+                    </div>
+                    </fieldset>
+                </form>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+}

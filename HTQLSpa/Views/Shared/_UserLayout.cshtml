@@ -1,0 +1,267 @@
+﻿@using HTQLSpa.Controllers;
+@using HTQLSpa.Models;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HTQLSpa</title>
+	<link href="~/assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/assets/css/style.css" rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="~/assets/css/fwslider.css" media="all">
+
+    <link href="~/img/favicon.ico" rel="icon">
+    <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+
+	@RenderSection("Styles", required: false)
+</head>
+
+<body>
+    <header>
+        <div class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="header-left">
+							<div class="logo">
+								<a asp-controller="Home" asp-action="Index"><img src="~/assets/spa/logo.png" alt=""/></a>
+							</div>
+							<div class="menu">
+							<a class="toggleMenu" href="#"><img src="~/assets/images/nav.png" alt="" /></a>
+							<ul class="nav" id="nav">
+								<li><a asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+						    	<li><a asp-controller="Home" asp-action="Shop">Gian hàng</a></li>
+						    	<li><a asp-controller="Home" asp-action="About">Giới thiệu</a></li>
+								<li><a asp-controller="Home" asp-action="Contact">Liên hệ</a></li>						
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="~/assets/js/responsive-nav.js"></script>
+						</div>							
+	    				<div class="clear"></div>
+	    				</div>
+						<div class="header_right">
+	    					<!-- start search-->
+							<div class="search-box">
+								<div id="sb-search" class="sb-search">
+									<form>
+										<input class="sb-search-input" placeholder="Nhập từ khoá bạn cần tìm..." type="search" name="search" id="search">
+										<input class="sb-search-submit" type="submit" value="">
+										<span class="sb-icon-search"> </span>
+									</form>
+								</div>
+							</div>
+							<ul class="icon1 sub-icon1 profile_img">
+								<li><a class="active-icon c1" href="#"> </a>
+								<ul class="sub-icon1 list">
+									<div class="product_control_buttons">
+						  				<a asp-controller="Order" asp-action="ClearBasket"><img src="~/assets/images/close_edit.png" alt=""/></a>
+									</div>
+									<div class="clear"></div>
+									@if (OrderController.ProductList != null)
+									{
+										@foreach(var obj in OrderController.ProductList)
+										{
+											int id = OrderController.productID.Find(e => e == obj.ProductID);
+											if (id != null)
+											{
+												<li class="list_img"><img src="~/assets/spa/@obj.BasketImagePath" alt=""/></li>
+												<li class="list_desc"><h4><a href="#">@obj.ProductName</a></h4>
+													<span class="actual">@OrderController.amount[id] x $@obj.ProductPrice</span>	
+												</li>
+											}
+										}
+									}
+									<div class="login_buttons">
+										<div class="check_button">
+											@if (String.IsNullOrEmpty(@LoginController.accountID))
+											{
+												<a asp-controller="Login" asp-action="Index">Thanh toán</a>	
+											}
+											@if (@String.Equals(LoginController.account_type, "User"))
+											{
+												<a asp-controller="Order" asp-action="Create">Thanh toán</a>
+											}
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="clear"></div>
+								</ul>
+								</li>
+							</ul>
+							<div class="clear"></div>
+						</div>
+						@if (LoginController.loggedin == false)
+						{
+							<div class="login_button"><a asp-area="" asp-controller="Login" asp-action="Index">Đăng nhập</a></div>
+						}
+						else
+						{
+							<div class="login_button"><a asp-area="" asp-controller="Account" asp-action="UserAccount">Xin chào @LoginController.accountID</a></div>
+							<div class="login_button"><a asp-controller="Login" asp-action="Logout">Đăng xuất</a></div>
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+    </header>
+
+    <main role="main" class="pb-3">
+		<!-- Navbar Start -->
+		<div class="container-fluid mb-5" style="margin-top: 30px;">
+			<div class="row border-top px-xl-5">
+				@if ( (!String.IsNullOrEmpty(LoginController.accountID)) && (String.Equals(LoginController.account_type, "User")) )
+				{
+					<div class="col-lg-3 d-none d-lg-block">
+						<a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
+							<h6 class="m-0">Quản lý Tài khoản</h6>
+							<i class="fa fa-angle-down text-dark"></i>
+						</a>
+						<nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
+							<div class="navbar-nav w-100 overflow-hidden" style="height: 83px;">
+								<a asp-controller="Customer" asp-action="Edit" class="nav-item nav-link">Quản lý Thông tin cá nhân</a>
+								<a asp-controller="Order" asp-action="Index" class="nav-item nav-link">Đơn hàng của tôi</a>
+							</div>
+						</nav>
+					</div>
+				}
+				else
+				{
+					<p>Bạn cần đăng nhập để xem trang này</p>
+				}
+				<div class="col-lg-9">
+					@RenderBody()
+				</div>
+			</div>
+		</div>
+		<!-- Navbar End -->
+    </main>
+
+    <footer>
+        <div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Sản phẩm</h4>
+							<li><a asp-controller="Home" asp-action="Shop">Gian hàng</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<a asp-controller="Home" asp-action="About">
+								<h4>Về chúng tôi</h4>
+							</a>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Địa chỉ</h4>
+							<li><a href="#">35P Đặng Tất</a></li>
+							<li><a href="#">P.Tân Định, Quận 1</a></li>
+							<li><a href="#">Tp.Hồ Chí Minh</a></li>
+							<li><a href="#"></a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Liên hệ</h4>
+							<li><a href="#">+84 907 466 894</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row footer_bottom">
+				    <div class="copy">
+			           <p>Chuyên đề Thực Tập Chuyên Ngành - <a href="#" target="_blank">Nhóm 08 - SV: Nguyễn Hoàng Bách</a></p>
+		            </div>
+   				</div>
+				<dl id="sample" class="dropdown">
+					<dt><a href="#"><span>Khu vực</span></a></dt>
+					<dd>
+						<ul>
+							<li><a href="#">Việt Nam</a></li>
+							<li><a href="#">China</a></li>
+							<li><a href="#">United Kingdoms</a></li>
+							<li><a href="#">United States</a></li>
+						</ul>
+				    </dd>
+	   			</dl>
+			</div>
+		</div>
+    </footer> 
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/jquery-ui.min.js"></script>
+    <script src="~/assets/js/fwslider.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+    </script>
+    <script type="text/javascript" src="~/assets/js/responsive-nav.js"></script>
+    <script src="~/assets/js/classie.js"></script>
+	<script src="~/assets/js/uisearch.js"></script>
+	<script>
+		new UISearch( document.getElementById( 'sb-search' ) );
+	</script>
+    <script type="text/javascript">
+		$(window).load(function() {
+			$("#flexiselDemo3").flexisel({
+				visibleItems: 5,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,    		
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+		    	responsiveBreakpoints: { 
+		    		portrait: { 
+		    			changePoint:480,
+		    			visibleItems: 1
+		    		}, 
+		    		landscape: { 
+		    			changePoint:640,
+		    			visibleItems: 2
+		    		},
+		    		tablet: { 
+		    			changePoint:768,
+		    			visibleItems: 3
+		    		}
+		    	}
+		    });
+		    
+		});
+	</script>
+	<script type="text/javascript" src="~/assets/js/jquery.flexisel.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

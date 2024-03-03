@@ -1,0 +1,156 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HTQLSpa
+build_property.RootNamespace = HTQLSpa
+build_property.ProjectDir = C:\Users\jio\Desktop\Personal\Đi học\Chuyên đề Thực tập chuyên ngành - Nhóm 08\HTQLSpa\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\jio\Desktop\Personal\Đi học\Chuyên đề Thực tập chuyên ngành - Nhóm 08\HTQLSpa
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Account/AdminAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZG1pbkFjY291bnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Account/EmployeeAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFbXBsb3llZUFjY291bnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Account/UserAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVc2VyQWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Customer/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Customer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Employee/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Employee/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Employee/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Employee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Home/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Home/Shop.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG9wLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Login/EmployeeLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRW1wbG95ZWVMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Login/UserRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cVXNlclJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Order/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Order/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Order/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Order/EditDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRWRpdERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Order/EmployeeIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRW1wbG95ZWVJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Product/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Product/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Product/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Shared/_EmployeeLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FbXBsb3llZUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Shared/_UserLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jio/Desktop/Personal/Đi học/Chuyên đề Thực tập chuyên ngành - Nhóm 08/HTQLSpa/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-cbgzec9aex

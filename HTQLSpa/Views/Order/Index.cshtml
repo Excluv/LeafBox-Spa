@@ -1,0 +1,113 @@
+﻿@using HTQLSpa.Controllers;
+
+@model IEnumerable<Order>
+@{
+    ViewData["Title"] = "Index";
+    if (String.Equals(LoginController.account_type, "Admin"))
+    {
+        Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    }
+    if (String.Equals(LoginController.account_type, "Employee"))
+    {
+        Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+    }
+    if (String.Equals(LoginController.account_type, "User"))
+    {
+        Layout = "~/Views/Shared/_UserLayout.cshtml";
+    }
+}
+
+@if (LoginController.accountID != "")
+{
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+	    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+		    <div class="navbar-nav ml-auto py-0">
+			    <a href="" class="nav-item nav-link">Danh sách Đơn hàng</a>
+		    </div>
+	    </div>
+    </nav>
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr align="center" >
+                <th align="center" width="10%">
+                    Mã ĐH
+                </th>
+                <th align="center"  width="20%">
+                    Ngày lập
+                </th>
+                <th align="center"  width="10%">
+                    Tổng tiền
+                </th>
+                <th align="center"  width="10%">
+                    Thanh toán
+                </th>
+                <th align="center"  width="10%">
+                    Hoàn thành
+                </th>
+                <th align="center"  width="10%">
+                    Mã KH
+                </th>
+                <th align="center"  width="10%">
+                    NV tiếp nhận
+                </th>
+                <th align="center"  width="20%">
+                    Thao tác
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var obj in Model)
+            {
+                <tr align="center">
+                    <td>
+                        @obj.OrderID
+                    </td>
+                    <td>
+                        @obj.OrderDate
+                    </td>
+                    <td>
+                        @obj.OrderTotal
+                    </td>
+                    <td>
+                        @obj.Paid
+                    </td>
+                    <td>
+                        @obj.Completed
+                    </td>
+                    <td>
+                        @obj.CustomerID
+                    </td>
+                    <td>
+                        @obj.EmployeeID
+                    </td>
+                    <td>
+                        <a asp-controller="Order" asp-action="Detail" asp-route-id="@obj.OrderID">
+                            <input type="submit" name="Submit" value="Chi tiết">
+                        </a>
+                        
+                        @if (String.Equals(@LoginController.account_type, "Admin"))
+                        {
+                            <a asp-controller="Order" asp-action="Edit" asp-route-id="@obj.OrderID">
+                                <input type="submit" name="Submit" value="Sửa">
+                            </a>
+                            <a asp-controller="Order" asp-action="Delete" asp-route-id="@obj.OrderID">
+                                <input type="submit" name="Submit" value="Xoá">
+                            </a>
+                        }
+                        @if (String.Equals(@LoginController.account_type, "Employee"))
+                        { 
+                            <a asp-controller="Order" asp-action="Receive" asp-route-id="@obj.OrderID">
+                                <input type="submit" name="Submit" value="Tiếp nhận">
+                            </a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Bạn cần đăng nhập tài khoản để xem trang này</p>
+}
+

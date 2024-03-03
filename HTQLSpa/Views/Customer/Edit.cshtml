@@ -1,0 +1,67 @@
+﻿@using HTQLSpa.Controllers;
+
+@model Customer
+@{
+    ViewData["Title"] = "Edit";
+    if (String.Equals(LoginController.account_type, "Admin"))
+    {
+        Layout = "~/Views/Shared/_UserLayout.cshtml";
+    }
+    if (String.Equals(LoginController.account_type, "User"))
+    { 
+        Layout = "~/Views/Shared/_UserLayout.cshtml";
+    }
+}
+
+<form method="post" asp-action="Edit">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h4 class="text-primary-basket" style="padding: 10px">Sửa Thông tin cá nhân</h4>
+        </div>
+        <div class="mb-3">
+            <label asp-for="CustomerName"></label>
+            <input asp-for="CustomerName" class="form-control"   />
+            <span asp-validation-for="CustomerName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DoB"></label>
+            <input asp-for="DoB"   />
+            <span asp-validation-for="DoB" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="CustomerAddress"></label>
+            <input asp-for="CustomerAddress" class="form-control"   />
+            <span asp-validation-for="CustomerAddress" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="PhoneNumber"></label>
+            <input asp-for="PhoneNumber" class="form-control"   />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="AccountID"></label>
+            <input asp-for="AccountID" disabled class="form-control"   />
+            <span asp-validation-for="AccountID" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" class="form-control"   />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <a asp-controller="" asp-action="">
+            <input type="submit" name="Submit" style="width:150px; padding:10px;" value="Sửa">
+        </a>
+        @if (String.Equals(LoginController.account_type, "Admin"))
+        {
+            <button asp-controller="Customer" asp-action="Index" style="width:150px; padding:10px;">
+                Quay lại
+            </button>
+        }
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"   />
+    }
+}

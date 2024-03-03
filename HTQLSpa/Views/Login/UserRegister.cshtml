@@ -1,0 +1,60 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "User Register";
+}
+
+<div class="main">
+    <div class="shop_top">
+		<div class="container">
+			<form method="post"> 
+				<div asp-validation-summary="All"></div>
+				<div class="register-top-grid">
+						<h3>Thông tin cá nhân</h3>
+						<div>
+							<span>Họ & Tên<label>*</label></span>
+							<input asp-for="CustomerName"	/> 
+							<span asp-validation-for="CustomerName"	/>
+						</div>
+						<div>
+							<span>Địa chỉ<label>*</label></span>
+							<input asp-for="CustomerAddress"	/> 
+							<span asp-validation-for="CustomerAddress"	/>
+						</div>
+						<div>
+							<span>SĐT<label>*</label></span>
+							<input asp-for="PhoneNumber"	/> 
+							<span asp-validation-for="PhoneNumber"	/>
+						</div>
+						<div>
+							<span>Ngày sinh<label>*</label></span>
+							<input asp-for="DoB"	/> 
+							<span asp-validation-for="DoB"	/>
+						</div>
+				</div>
+				<div class="clear"> </div>
+				<div class="register-bottom-grid">
+						<h3>Thông tin đăng nhập</h3>
+						<div>
+							<span>Tên đăng nhập<label>*</label></span>
+							<input asp-for="AccountID"	/>
+							<span asp-validation-for="AccountID"	/>
+						</div>
+						<div>
+							<span>Mật khẩu<label>*</label></span>
+							<input asp-for="Password"	/>
+							<span asp-validation-for="Password"	/>
+						</div>
+						<div class="clear"> </div>
+				</div>
+				<div class="clear"> </div>
+				<input type="submit" value="Tạo">
+			</form>
+		</div>
+	</div>
+</div>
+
+@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial"	/>
+	}
+}

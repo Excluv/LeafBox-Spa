@@ -1,0 +1,113 @@
+﻿@using HTQLSpa.Controllers;
+
+@model IEnumerable<Product>
+@{
+	ViewData["Title"] = "Shop";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main">
+	<div class="shop_top">
+		<div class="container">
+			<div class="row shop_box-top">
+				@{int idx = 0;}
+				@foreach (var obj in Model)
+				{
+					<div class="col-md-3 shop_box">
+						<a href="#">
+							<img src="~/assets/spa/@obj.ImagePath" class="img-responsive" alt=""/>
+							<span class="new-box">
+								<span class="new-label">New</span>
+							</span>
+							<span class="sale-box">
+								<span class="sale-label">Sale!</span>
+							</span>
+							<div class="shop_desc">
+								<h3><a href="#">@obj.ProductName</a></h3>
+								<p>@obj.ProductDescription</p>
+								<span class="reducedfrom">VNĐ 1,000,000</span>
+								<span class="actual">VNĐ @obj.ProductPrice.ToString("N0")</span><br>
+								<ul class="buttons">	
+									<li class="cart"><a asp-controller="Order" asp-action="AddToBasket" asp-route-id="@obj.ProductID">Thêm vào Giỏ hàng</a></li>
+									<li class="shop_btn"><a asp-controller="Home" asp-action="Detail" asp-route-id="@obj.ProductID">Xem thêm</a></li>
+									<div class="clear"> </div>
+								</ul>
+							</div>
+						</a>
+					</div>
+					idx += 1;
+					if (idx == 4)
+					{
+						break;
+					}
+				}
+			</div>
+			<div class="row">
+				@{int idx2 = 4;}
+				@foreach (var obj in Model)
+				{
+					if (idx > 0)
+					{
+						idx -= 1;
+						continue;
+					}
+					<div class="col-md-3 shop_box">
+						<a href="#">
+							<img src="~/assets/spa/@obj.ImagePath" class="img-responsive" alt=""/>
+							<span class="new-box">
+								<span class="new-label">New</span>
+							</span>
+							<span class="sale-box">
+								<span class="sale-label">Sale!</span>
+							</span>
+							<div class="shop_desc">
+								<h3><a href="#">@obj.ProductName</a></h3>
+								<p>@obj.ProductDescription</p>
+								<span class="reducedfrom">VNĐ 1,000,000</span>
+								<span class="actual">VNĐ @obj.ProductPrice.ToString("N0")</span><br>
+								<ul class="buttons">	
+									<li class="cart"><a asp-controller="Order" asp-action="AddToBasket" asp-route-id="@obj.ProductID">Thêm vào Giỏ hàng</a></li>
+									<li class="shop_btn"><a asp-controller="Home" asp-action="Detail" asp-route-id="@obj.ProductID">Xem thêm</a></li>
+									<div class="clear"> </div>
+								</ul>
+							</div>
+						</a>
+					</div>
+					idx2 += 1;
+				}
+			</div>
+			<div class="row">
+				@foreach (var obj in Model)
+				{
+					@if (idx2 > 0)
+					{
+						idx2 -= 1;
+						continue;
+					}
+					<div class="col-md-3 shop_box">
+						<a href="#">
+							<img src="~/assets/spa/@obj.ImagePath" class="img-responsive" alt=""/>
+							<span class="new-box">
+								<span class="new-label">New</span>
+							</span>
+							<span class="sale-box">
+								<span class="sale-label">Sale!</span>
+							</span>
+							<div class="shop_desc">
+								<h3><a href="#">@obj.ProductName</a></h3>
+								<p>@obj.ProductDescription</p>
+								<span class="reducedfrom">VNĐ 1,000,000</span>
+								<span class="actual">VNĐ @obj.ProductPrice.ToString("N0")</span><br>
+								<ul class="buttons">	
+									<li class="cart"><a asp-controller="Order" asp-action="AddToBasket" asp-route-id="@obj.ProductID">Thêm vào Giỏ hàng</a></li>
+									<li class="shop_btn"><a asp-controller="Home" asp-action="Detail" asp-route-id="@obj.ProductID">Xem thêm</a></li>
+									<div class="clear"> </div>
+								</ul>
+							</div>
+						</a>
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+</div>

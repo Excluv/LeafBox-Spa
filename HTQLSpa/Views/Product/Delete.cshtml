@@ -1,0 +1,39 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post" asp-action="Delete">
+    <input asp-for="ProductID" hidden  />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h4 class="text-primary-basket" style="padding: 10px">Xoá Thông tin Sản phẩm</h4>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ProductName"></label>
+            <input asp-for="ProductName" disabled class="form-control"   />
+        </div>
+        <div class="mb-3">
+            <label asp-for="ProductDescription"></label>
+            <input asp-for="ProductDescription" disabled class="form-control"   />
+        </div>
+        <div class="mb-3">
+            <label asp-for="ProductPrice"></label>
+            <input asp-for="ProductPrice" disabled class="form-control"   />
+        </div>
+        <a asp-controller="" asp-action="">
+            <input type="submit" name="Submit" style="width:150px; padding:10px;" value="Xoá">
+        </a>
+        <button asp-controller="Product" asp-action="Index" style="width:150px; padding:10px;">
+            Quay lại
+        </button>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+    <partial name="_ValidationScriptsPartial"   />
+    }
+}
+

@@ -1,0 +1,72 @@
+﻿@using HTQLSpa.Controllers;
+
+@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@if (LoginController.accountID != "" && (LoginController.account_type == "Admin" || LoginController.account_type == "Employee"))
+{
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+	    <div class="navbar-nav ml-auto py-0">
+		    <a href="" class="nav-item nav-link">Danh sách Sản phẩm</a>
+	    </div>
+    </div>
+    <a asp-controller="Product" asp-action="Create"><input type="submit" name="Submit" value="Thêm Sản phẩm"></a>
+    </nav>
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr align="center" >
+                <th align="center" width="10%">
+                    Mã SP
+                </th>
+                <th align="center"  width="25%">
+                    Tên SP
+                </th>
+                <th align="center"  width="25%">
+                    Mô tả
+                </th>
+                <th align="center"  width="20%">
+                    Đơn giá
+                </th>
+                <th align="center"  width="20%">
+                    Thao tác
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var obj in Model)
+            {
+                <tr align="center">
+                    <td>
+                        @obj.ProductID
+                    </td>
+                    <td>
+                        @obj.ProductName
+                    </td>
+                    <td>
+                        @obj.ProductDescription
+                    </td>
+                    <td>
+                        @obj.ProductPrice
+                    </td>
+                    <td>
+                        <a asp-controller="Product" asp-action="Edit" asp-route-id="@obj.ProductID">
+                             <input type="submit" name="Submit" value="Sửa">
+                        </a>
+                        <a asp-controller="Product" asp-action="Delete" asp-route-id="@obj.ProductID">
+                            <input type="submit" name="Submit" value="Xoá">
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Bạn cần đăng nhập tài khoản để xem trang này</p>
+}
+
+

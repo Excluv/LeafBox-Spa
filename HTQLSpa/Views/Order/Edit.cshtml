@@ -1,0 +1,62 @@
+﻿@using HTQLSpa.Controllers;
+
+@model Order
+@{
+    ViewData["Title"] = "Edit Orders";
+    if (String.Equals(LoginController.account_type, "Admin"))
+    {
+        Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    }
+    if (String.Equals(LoginController.account_type, "User"))
+    {
+        Layout = "~/Views/Shared/_UserLayout.cshtml";
+    }
+}
+
+<form method="post" asp-action="Edit">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h4 class="text-primary-basket" style="padding: 10px">Sửa Đơn hàng</h4>
+        </div>
+        <div class="mb-3">
+            <label asp-for="OrderDate"></label>
+            <input asp-for="OrderDate"   />
+            <span asp-validation-for="OrderDate" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Paid"></label>
+            <input asp-for="Paid" class="form-control"   />
+            <span asp-validation-for="Paid" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Completed"></label>
+            <input asp-for="Completed" class="form-control"   />
+            <span asp-validation-for="Completed" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="CustomerID"></label>
+            <input asp-for="CustomerID" disabled class="form-control"   />
+            <span asp-validation-for="CustomerID" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="EmployeeID"></label>
+            <input asp-for="EmployeeID" class="form-control"   />
+            <span asp-validation-for="EmployeeID" class="text-danger"></span>
+        </div>
+        @if (String.Equals(LoginController.account_type, "Admin"))
+        {
+            <a asp-controller="" asp-action="">
+                <input type="submit" name="Submit" style="width:150px; padding:10px;" value="Sửa">
+            </a>
+        }
+        <button asp-controller="Order" asp-action="Index" class="btn btn-secondary btn-style" style="width:150px; padding:10px;">
+            Quay lại
+        </button>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"   />
+    }
+}
